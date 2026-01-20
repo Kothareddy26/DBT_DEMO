@@ -1,5 +1,5 @@
 Select
 * 
-from {{ source('demo', 'weather') }}
+from {{ source('demo', 'bike') }}
 
 limit 100

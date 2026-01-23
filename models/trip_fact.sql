@@ -11,7 +11,7 @@ END_STATION_ID,
 MEMBER_CSUAL AS MEMBER_CASUAL,
 TIMESTAMPDIFF(SECOND,TO_TIMESTAMP(STARTED_AT),TO_TIMESTAMP(ENDED_AT)) AS TRIP_DURATION_SECONDS
 
-from {{ source('demo', 'bike') }}
+from {{ ref('stg_bike') }}
 
 where RIDE_ID != 'ride_id'
 
